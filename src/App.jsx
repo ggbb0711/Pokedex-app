@@ -47,7 +47,7 @@ export default function App() {
     catch(e){
       setLoadingState(false)
       console.error(e)
-      updateDisplay({},[],'./src/resource/MissingNo.1.webp','Please enter a correct pokemon name')
+      updateDisplay({},[],'Images/MissingNo.1.webp','Please enter a correct pokemon name')
     }
 
 
@@ -81,13 +81,13 @@ function Display(props){
       setLoadingState(props.loadingState)
     }
 
-    if(props.pokeImage!==pokeImage){
+    if(props.pokeImage!==pokeImage||props.pokeType!==pokeType||props.pokeName!==pokeName){
       setPokeName(props.pokeName)
       setpokeType(props.pokeType)
       setPokeImage(props.pokeImage)
       console.log(pokeType)
     }
-  }, [props.pokeImage,props.loadingState])
+  }, [props.pokeImage,props.pokeType,props.pokeName,props.loadingState])
 
   return(
   <div className='w-full h-[70%] z-10 p-4 flex flex-col justify-center items-center'>
