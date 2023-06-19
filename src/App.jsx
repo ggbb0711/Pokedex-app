@@ -6,7 +6,7 @@ import './index.css'
 export default function App() {
   const [bgColor,setBgColor]=useState({})
   const [pokeType,setpokeType]=useState([])
-  const [pokeImage,setPokeImage]=useState('./src/resource/MissingNo.1.webp')
+  const [pokeImage,setPokeImage]=useState('Images/MissingNo.1.webp')
   const [pokeName,setPokeName]=useState('Please enter a name to search')
   const [currName,setCurrName]=useState('')
   const [loadingState,setLoadingState]=useState(false)
@@ -56,7 +56,7 @@ export default function App() {
 
   return (
     <div className='w-[400px] h-[600px] relative flex flex-col m-auto border-2 border-black'>
-      <img className='absolute w-full h-full ' src="./src/resource/Pokedex_Background.webp" alt="pokedex background" />
+      <img className='absolute w-full h-full ' src="Images/Pokedex_Background.webp" alt="pokedex background" />
       <div className={`absolute w-full h-full opacity-50`} style={bgColor}></div>
       <Display pokeName={pokeName} pokeImage={pokeImage} pokeType={pokeType} loadingState={loadingState}></Display>
       <div className='bg-red-500 w-full h-[30%] z-10'>
